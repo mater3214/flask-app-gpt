@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 
 # Load environment variables from .env file
-load_dotenv()i
+load_dotenv()
 
 app = Flask(__name__)
 
