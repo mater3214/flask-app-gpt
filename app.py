@@ -21,7 +21,7 @@ def idae():
 
         # Set the OpenAI API key
         # openai.api_key = os.getenv("OPENAI_API_KEY")
-        openai.api_key = "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" # api key
+        openai.api_key = "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" # api key
 
         # Make a request to the OpenAI GPT-3.5 API
         response = openai.ChatCompletion.create(
