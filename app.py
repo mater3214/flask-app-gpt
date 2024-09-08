@@ -1,9 +1,13 @@
-from pyngrok import ngrok
-ngrok.set_auth_token("2lltjbVBAmhIzxIGeBs8WIx2zNh_62Rhe3Jq2nHsNXcRv5B6R") # get key from ngrok
-public_url = ngrok.connect(5000)
-print(f" * ngrok tunnel \"{public_url}\" -> \"http://127.0.0.1:5000\"")
+# from openai import OpenAI
+import os
 
-from flask import Flask, request, jsonify
+import openai
+import requests
+from dotenv import load_dotenv
+from flask import Flask, jsonify, request
+
+# Load environment variables from .env file
+load_dotenv()i
 
 app = Flask(__name__)
 
@@ -41,7 +45,5 @@ def idae():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-public_url = ngrok.connect(5000)
-print(f" * ngrok tunnel \"{public_url}\" -> \"http://127.0.0.1:5000\"")
-
-app.run()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
